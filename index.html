@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas de Seguridad — TecnoMarket</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+
+    <!-- Header Compacto con Tríada CIA -->
+    <header class="bg-slate-900/90 border-b border-slate-800 sticky top-0 z-10 backdrop-blur">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+                <h1 class="text-xl font-extrabold tracking-tight text-white">
+                    Políticas de Seguridad — Tecno<span class="text-cyan-400">Market</span>
+                </h1>
+                <p class="text-xs text-slate-400">Reglas claras para que compres seguro y sin sorpresas</p>
+            </div>
+            <!-- Badges Tríada CIA -->
+            <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800/60">Confidencialidad</span>
+                <span class="px-3 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800/60">Integridad</span>
+                <span class="px-3 py-1 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-800/60">Disponibilidad</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-8 space-y-8">
+
+        <!-- BLOQUE 1: POLÍTICAS PARA CLIENTES -->
+        <section class="bg-slate-900/70 border border-cyan-900/50 rounded-2xl p-6 space-y-5 shadow-lg">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Para vos como comprador</span>
+                    <h2 class="text-lg font-bold text-white">1. Políticas para Clientes</h2>
+                </div>
+                <span class="text-xs px-3 py-1 rounded-lg bg-cyan-950/80 text-cyan-300 border border-cyan-800/50 w-fit">
+                    Compras y Datos Protegidos
+                </span>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 items-start">
+                <!-- Alcance y Privilegios -->
+                <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-cyan-500 rounded-xl p-4 space-y-2.5">
+                    <h3 class="text-sm font-bold text-cyan-300">Privacidad de tu cuenta y tus compras</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Cuando creás una cuenta en TecnoMarket, sos el único que tiene acceso a tu carrito, tus facturas, tus direcciones de entrega y el seguimiento real de cada producto.
+                    </p>
+                    <div id="text-c1" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                        <p>
+                            Ningún otro usuario registrado puede ver qué adquiriste, consultar tus comprobantes ni modificar tus pedidos en curso. Vos solo operás sobre tus propias compras dentro del catálogo oficial de la tienda, con precios transparentes y comprobantes válidos para cualquier reclamo o garantía.
+                        </p>
+                        <div class="pt-2 border-t border-slate-800/80 text-slate-400">
+                            <strong class="text-slate-200">En detalle:</strong> Aplicamos permisos limitados por usuario. Tu sesión está aislada del resto de los compradores y de la gestión interna de la tienda, garantizando que el historial de facturas y direcciones sea exclusivamente accesible por vos.
+                        </div>
+                    </div>
+                    <button onclick="toggleBloque('text-c1', this)" class="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 pt-1 cursor-pointer">
+                        Ver más ↓
+                    </button>
+                </article>
+
+                <!-- Contraseñas -->
+                <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-cyan-500 rounded-xl p-4 space-y-2.5">
+                    <h3 class="text-sm font-bold text-cyan-300">Resguardo total de tu contraseña</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Tu contraseña es personal y nadie del equipo de TecnoMarket puede verla ni te la va a pedir jamás por WhatsApp, teléfono o correo electrónico.
+                    </p>
+                    <div id="text-c2" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                        <p>
+                            Si alguien te escribe pidiendo tus datos de acceso o códigos en nombre de la tienda, es un intento de estafa: nosotros nunca necesitamos tu clave para gestionar un envío, validar un pago, tramitar una garantía o hacer una devolución de dinero.
+                        </p>
+                        <div class="pt-2 border-t border-slate-800/80 text-slate-400">
+                            <strong class="text-slate-200">En detalle:</strong> Nunca guardamos tu contraseña escrita tal cual la pusiste. Apenas te registrás, el sistema la transforma automáticamente en un código secreto que no se puede volver atrás, así ni los empleados ni nadie que entre al sistema puede leer cuál es tu clave.
+                        </div>
+                    </div>
+                    <button onclick="toggleBloque('text-c2', this)" class="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 pt-1 cursor-pointer">
+                        Ver más ↓
+                    </button>
+                </article>
+
+                <!-- Privacidad y Conexión Segura -->
+                <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-blue-500 rounded-xl p-4 space-y-2.5">
+                    <h3 class="text-sm font-bold text-blue-300">Pagos seguros y navegación protegida</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Cada vez que cargás tu nombre, domicilio, correo o datos para abonar un producto, toda esa información viaja encriptada hasta nuestro servidor.
+                    </p>
+                    <div id="text-c3" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                        <p>
+                            Tus datos personales se usan únicamente para emitir la factura correspondiente y entregarte lo que compraste en tiempo y forma. Bajo ningún concepto vendemos, alquilamos ni cedemos tu teléfono o correo a otras empresas para enviarte publicidad.
+                        </p>
+                        <div class="pt-2 border-t border-slate-800/80 text-slate-400">
+                            <strong class="text-slate-200">En detalle:</strong> Siempre vas a ver el candadito cerrado en la barra de direcciones del navegador. Ese sello verifica que estás en la página oficial de TecnoMarket y crea un túnel privado para que nadie pueda espiar lo que escribís ni robar los datos de tu tarjeta, incluso si comprás conectado a un Wi-Fi público.
+                        </div>
+                    </div>
+                    <button onclick="toggleBloque('text-c3', this)" class="text-[11px] font-semibold text-blue-400 hover:text-blue-300 pt-1 cursor-pointer">
+                        Ver más ↓
+                    </button>
+                </article>
+
+                <!-- Incumplimiento -->
+                <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-blue-500 rounded-xl p-4 space-y-2.5">
+                    <h3 class="text-sm font-bold text-blue-300">Bloqueo preventivo ante intentos raros</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Si otra persona intenta entrar a tu cuenta probando varias contraseñas equivocadas o detectamos actividad sospechosa, frenamos el acceso al instante.
+                    </p>
+                    <div id="text-c4" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                        <p>
+                            De esta manera evitamos que terceros usen tu usuario para realizar compras no autorizadas, consultar tus datos personales o cambiar la dirección de entrega de un paquete que ya pagaste. También te notificamos al correo registrado para que recuperes el control rápido.
+                        </p>
+                        <div class="pt-2 border-t border-slate-800/80 text-slate-400">
+                            <strong class="text-slate-200">En detalle:</strong> Tras varios intentos fallidos de inicio de sesión, se activa un bloqueo temporal preventivo y te pedimos validar tu identidad y renovar la contraseña antes de habilitar nuevas compras.
+                        </div>
+                    </div>
+                    <button onclick="toggleBloque('text-c4', this)" class="text-[11px] font-semibold text-blue-400 hover:text-blue-300 pt-1 cursor-pointer">
+                        Ver más ↓
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <!-- BOTÓN PRINCIPAL VER MÁS (Despliega el Bloque 2 completo) -->
+        <div class="flex justify-center">
+            <button id="btn-seccion-interna" onclick="toggleSeccionInterna()" class="px-6 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-800/70 text-xs font-bold tracking-wide shadow-md transition flex items-center gap-2 cursor-pointer">
+                <span>Ver más políticas (Control interno de la empresa)</span>
+                <span id="icono-seccion">↓</span>
+            </button>
+        </div>
+
+        <!-- BLOQUE 2: POLÍTICAS PARA EMPLEADOS Y EQUIPO INTERNO -->
+        <section id="bloque-interno" class="hidden bg-slate-900/70 border border-emerald-900/50 rounded-2xl p-6 space-y-5 shadow-lg">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">Cómo trabajamos por dentro</span>
+                    <h2 class="text-lg font-bold text-white">2. Políticas para Empleados y Equipo Interno</h2>
+                </div>
+                <span class="text-xs px-3 py-1 rounded-lg bg-emerald-950/80 text-emerald-300 border border-emerald-800/50 w-fit">
+                    Control y Respaldo Interno
+                </span>
+            </div>
+
+            <!-- Roles Internos -->
+            <div class="grid sm:grid-cols-3 gap-3">
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5">
+                    <span class="text-xs font-bold text-emerald-400 block mb-1">Empleados</span>
+                    <p class="text-xs text-slate-300 leading-relaxed">Solo preparan los pedidos y actualizan el stock disponible; no tienen acceso a contraseñas ni datos bancarios de los clientes.</p>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5">
+                    <span class="text-xs font-bold text-indigo-400 block mb-1">Administradores</span>
+                    <p class="text-xs text-slate-300 leading-relaxed">Gestionan usuarios y configuraciones ingresando con su clave y un <strong>código de validación en el celular</strong> obligatorio.</p>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5">
+                    <span class="text-xs font-bold text-teal-400 block mb-1">Personal Técnico</span>
+                    <p class="text-xs text-slate-300 leading-relaxed">Se encargan de mantener los servidores funcionando sin caídas, actualizar el código y verificar las copias de seguridad.</p>
+                </div>
+            </div>
+
+            <!-- Normativas Operativas Internas -->
+            <div class="grid md:grid-cols-2 gap-4 items-start">
+                <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-emerald-500 rounded-xl p-4 space-y-2.5">
+                    <h3 class="text-sm font-bold text-emerald-300">Control de acceso y bajas inmediatas</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Cada integrante de TecnoMarket trabaja con un usuario individual y tiene estrictamente prohibido prestarlo o anotarlo en lugares visibles.
+                    </p>
+                    <div id="text-e1" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                        <p>
+                            Si un empleado deja de formar parte de la empresa, su cuenta y todos sus permisos se bloquean en el mismo momento en que termina su relación laboral, evitando que alguien ajeno a la tienda pueda entrar al panel interno.
+                        </p>
+                        <div class="pt-2 border-t border-slate-800/80 text-slate-400">
+                            <strong class="text-slate-200">En detalle:</strong> Todo movimiento interno queda registrado con usuario y hora (trazabilidad). Al desvincularse un miembro del equipo, se revocan credenciales, tokens y accesos remotos de inmediato.
+                        </div>
+                    </div>
+                    <button onclick="toggleBloque('text-e1', this)" class="text-[11px] font-semibold text-emerald-400 hover:text-emerald-300 pt-1 cursor-pointer">
+                        Ver más ↓
+                    </button>
+                </article>
+
+                <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-emerald-500 rounded-xl p-4 space-y-2.5">
+                    <h3 class="text-sm font-bold text-emerald-300">Prohibición de sacar información</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Ningún empleado puede descargar bases de datos de compradores, listados de facturas ni código del sistema a dispositivos personales.
+                    </p>
+                    <div id="text-e2" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                        <p>
+                            Está terminantemente prohibido copiar datos a pendrives, correos personales o teléfonos particulares. Toda consulta sobre un envío o reclamo se realiza únicamente dentro de la plataforma interna bajo control y auditoría.
+                        </p>
+                        <div class="pt-2 border-t border-slate-800/80 text-slate-400">
+                            <strong class="text-slate-200">En detalle:</strong> La información de los compradores solo se consulta dentro del entorno seguro de la empresa para gestionar envíos o garantías. Cualquier extracción no autorizada implica sanciones legales y laborales.
+                        </div>
+                    </div>
+                    <button onclick="toggleBloque('text-e2', this)" class="text-[11px] font-semibold text-emerald-400 hover:text-emerald-300 pt-1 cursor-pointer">
+                        Ver más ↓
+                    </button>
+                </article>
+
+                <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-indigo-500 rounded-xl p-4 space-y-2.5">
+                    <h3 class="text-sm font-bold text-indigo-300">Copias de seguridad (Backups)</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Guardamos copias automáticas de toda la información de ventas, facturas y comprobantes en servidores separados del sistema principal.
+                    </p>
+                    <div id="text-e3" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                        <p>
+                            Esto garantiza que, ante un corte de luz, una falla de hardware o cualquier inconveniente técnico en el servidor principal, el registro de tu compra, tus comprobantes y tu garantía sigan intactos y disponibles.
+                        </p>
+                        <div class="pt-2 border-t border-slate-800/80 text-slate-400">
+                            <strong class="text-slate-200">En detalle:</strong> Los respaldos se almacenan cifrados en servidores externos aislados y el área técnica realiza simulacros de restauración cada tres meses para comprobar que funcionen sin fallas.
+                        </div>
+                    </div>
+                    <button onclick="toggleBloque('text-e3', this)" class="text-[11px] font-semibold text-indigo-400 hover:text-indigo-300 pt-1 cursor-pointer">
+                        Ver más ↓
+                    </button>
+                </article>
+
+                <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-indigo-500 rounded-xl p-4 space-y-2.5">
+                    <h3 class="text-sm font-bold text-indigo-300">Respuesta rápida ante fallas o incidentes</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Si ocurre un error en la página o detectamos un intento de ataque externo, el equipo tiene la obligación de reportarlo al instante.
+                    </p>
+                    <div id="text-e4" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                        <p>
+                            Está prohibido ocultar fallas o borrar registros de actividad. Ante cualquier inconveniente, se aísla el problema de inmediato para que no afecte a los compradores, se restaura el servicio normal y se refuerza la seguridad.
+                        </p>
+                        <div class="pt-2 border-t border-slate-800/80 text-slate-400">
+                            <strong class="text-slate-200">En detalle:</strong> Seguimos un protocolo de 5 pasos ante incidentes: <strong>Detectar → Analizar → Contener → Restaurar → Prevenir</strong>, preservando siempre los registros para evitar que vuelva a ocurrir.
+                        </div>
+                    </div>
+                    <button onclick="toggleBloque('text-e4', this)" class="text-[11px] font-semibold text-indigo-400 hover:text-indigo-300 pt-1 cursor-pointer">
+                        Ver más ↓
+                    </button>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-5 text-center text-xs text-slate-400">
+        <div class="max-w-5xl mx-auto px-4 space-y-1">
+            <p class="font-semibold text-slate-200">Trabajo Práctico — Seguridad Informática | Prof. Jesús Cabrera</p>
+            <p>Alumnos: Luciano Ocampo • Mauro Quintana • Lucas Lopez</p>
+        </div>
+    </footer>
+
+    <!-- Scripts interactivos -->
+    <script>
+        function toggleBloque(id, btn) {
+            const bloque = document.getElementById(id);
+            const estaOculto = bloque.classList.contains('hidden');
+            
+            if (estaOculto) {
+                bloque.classList.remove('hidden');
+                btn.textContent = 'Ver menos ↑';
+            } else {
+                bloque.classList.add('hidden');
+                btn.textContent = 'Ver más ↓';
+            }
+        }
+
+        function toggleSeccionInterna() {
+            const bloque = document.getElementById('bloque-interno');
+            const btnTexto = document.querySelector('#btn-seccion-interna span:first-child');
+            const icono = document.getElementById('icono-seccion');
+            const estaOculto = bloque.classList.contains('hidden');
+
+            if (estaOculto) {
+                bloque.classList.remove('hidden');
+                btnTexto.textContent = 'Ver menos (Ocultar control interno)';
+                icono.textContent = '↑';
+            } else {
+                bloque.classList.add('hidden');
+                btnTexto.textContent = 'Ver más políticas (Control interno de la empresa)';
+                icono.textContent = '↓';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -58,7 +58,7 @@
                             Ningún otro usuario registrado puede ver qué adquiriste, consultar tus comprobantes ni modificar tus pedidos en curso. Vos solo operás sobre tus propias compras dentro del catálogo oficial de la tienda, con precios transparentes y comprobantes válidos para cualquier reclamo o garantía.
                         </p>
                         <div class="pt-2 border-t border-slate-800/80 text-slate-400">
-                            <strong class="text-slate-200">En detalle:</strong> Aplicamos permisos limitados por usuario. Tu sesión está aislada del resto de los compradores y de la gestión interna de la tienda, garantizando que el historial de facturas y direcciones sea exclusivamente accesible por vos.
+                            <strong class="text-slate-200">En detalle:</strong> Aplicamos permisos limitados por usuario y cierre automático de sesión tras 30 minutos de inactividad. Tu sesión está aislada del resto de los compradores y de la gestión interna de la tienda, garantizando que el historial de facturas y direcciones sea exclusivamente accesible por vos.
                         </div>
                     </div>
                     <button onclick="toggleBloque('text-c1', this)" class="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 pt-1 cursor-pointer">
@@ -74,10 +74,10 @@
                     </p>
                     <div id="text-c2" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
                         <p>
-                            Si alguien te escribe pidiendo tus datos de acceso o códigos en nombre de la tienda, es un intento de estafa: nosotros nunca necesitamos tu clave para gestionar un envío, validar un pago, tramitar una garantía o hacer una devolución de dinero.
+                            Si alguien te escribe pidiendo tus datos de acceso o códigos en nombre de la tienda, es un intento de estafa: nosotros nunca necesitamos tu clave para gestionar un envío, validar un pago, tramitar una garantía o hacer una devolución de dinero. Solicitamos una contraseña de al menos 12 caracteres combinando mayúsculas, minúsculas, números y símbolos.
                         </p>
                         <div class="pt-2 border-t border-slate-800/80 text-slate-400">
-                            <strong class="text-slate-200">En detalle:</strong> Nunca guardamos tu contraseña escrita tal cual la pusiste. Apenas te registrás, el sistema la transforma automáticamente en un código secreto que no se puede volver atrás, así ni los empleados ni nadie que entre al sistema puede leer cuál es tu clave.
+                            <strong class="text-slate-200">En detalle:</strong> Nunca guardamos tu contraseña escrita tal cual la pusiste. Apenas te registrás, el sistema la transforma de forma irreversible mediante hashing seguro, de modo que ni el personal ni nadie que acceda al sistema pueda leer tu clave original.
                         </div>
                     </div>
                     <button onclick="toggleBloque('text-c2', this)" class="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 pt-1 cursor-pointer">
@@ -85,18 +85,21 @@
                     </button>
                 </article>
 
-                <!-- Privacidad y Conexión Segura -->
+                <!-- Privacidad, Pagos y Conexión Segura -->
                 <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-blue-500 rounded-xl p-4 space-y-2.5">
-                    <h3 class="text-sm font-bold text-blue-300">Pagos seguros y navegación protegida</h3>
+                    <h3 class="text-sm font-bold text-blue-300">Pagos seguros, terceros y derechos de privacidad</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">
-                        Cada vez que cargás tu nombre, domicilio, correo o datos para abonar un producto, toda esa información viaja encriptada hasta nuestro servidor.
+                        Los pagos con tarjeta se procesan a través de una pasarela externa certificada bajo estándar PCI DSS: TecnoMarket nunca recibe ni almacena los datos de tu tarjeta ni su código de seguridad.
                     </p>
                     <div id="text-c3" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
                         <p>
-                            Tus datos personales se usan únicamente para emitir la factura correspondiente y entregarte lo que compraste en tiempo y forma. Bajo ningún concepto vendemos, alquilamos ni cedemos tu teléfono o correo a otras empresas para enviarte publicidad.
+                            Tus datos personales se usan para emitir la factura y entregar tu compra, y solo se comparten estrictamente lo necesario con la pasarela de pago y las empresas de logística encargadas del envío. Nunca vendemos ni cedemos tu teléfono o correo con fines publicitarios externos.
+                        </p>
+                        <p>
+                            Conservamos los datos de cuenta mientras esté activa y los comprobantes fiscales y de garantía por los plazos legales vigentes (hasta 10 años según normativa contable/impositiva). Según la <strong>Ley N.º 25.326</strong> de Protección de Datos Personales, podés pedir acceso, rectificación o baja/supresión escribiendo a <strong class="text-slate-200">privacidad@tecnomarket.com.ar</strong>.
                         </p>
                         <div class="pt-2 border-t border-slate-800/80 text-slate-400">
-                            <strong class="text-slate-200">En detalle:</strong> Siempre vas a ver el candadito cerrado en la barra de direcciones del navegador. Ese sello verifica que estás en la página oficial de TecnoMarket y crea un túnel privado para que nadie pueda espiar lo que escribís ni robar los datos de tu tarjeta, incluso si comprás conectado a un Wi-Fi público.
+                            <strong class="text-slate-200">En detalle:</strong> La navegación viaja cifrada mediante HTTPS/TLS (candadito del navegador) y el cobro se completa en el entorno certificado de la pasarela externa, protegiendo tu información incluso en redes Wi-Fi públicas.
                         </div>
                     </div>
                     <button onclick="toggleBloque('text-c3', this)" class="text-[11px] font-semibold text-blue-400 hover:text-blue-300 pt-1 cursor-pointer">
@@ -115,7 +118,7 @@
                             De esta manera evitamos que terceros usen tu usuario para realizar compras no autorizadas, consultar tus datos personales o cambiar la dirección de entrega de un paquete que ya pagaste. También te notificamos al correo registrado para que recuperes el control rápido.
                         </p>
                         <div class="pt-2 border-t border-slate-800/80 text-slate-400">
-                            <strong class="text-slate-200">En detalle:</strong> Tras varios intentos fallidos de inicio de sesión, se activa un bloqueo temporal preventivo y te pedimos validar tu identidad y renovar la contraseña antes de habilitar nuevas compras.
+                            <strong class="text-slate-200">En detalle:</strong> Tras 5 intentos fallidos de inicio de sesión, se activa un bloqueo temporal preventivo y te pedimos validar tu identidad y renovar la contraseña antes de habilitar nuevas compras.
                         </div>
                     </div>
                     <button onclick="toggleBloque('text-c4', this)" class="text-[11px] font-semibold text-blue-400 hover:text-blue-300 pt-1 cursor-pointer">
@@ -149,31 +152,31 @@
             <div class="grid sm:grid-cols-3 gap-3">
                 <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5">
                     <span class="text-xs font-bold text-emerald-400 block mb-1">Empleados</span>
-                    <p class="text-xs text-slate-300 leading-relaxed">Solo preparan los pedidos y actualizan el stock disponible; no tienen acceso a contraseñas ni datos bancarios de los clientes.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Solo preparan los pedidos y actualizan el stock disponible; no tienen acceso a contraseñas ni a datos de tarjetas de los clientes.</p>
                 </div>
                 <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5">
                     <span class="text-xs font-bold text-indigo-400 block mb-1">Administradores</span>
-                    <p class="text-xs text-slate-300 leading-relaxed">Gestionan usuarios y configuraciones ingresando con su clave y un <strong>código de validación en el celular</strong> obligatorio.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Gestionan usuarios y configuraciones ingresando con clave de al menos 12 caracteres y un <strong>código de validación en el celular (2FA)</strong> obligatorio.</p>
                 </div>
                 <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5">
                     <span class="text-xs font-bold text-teal-400 block mb-1">Personal Técnico</span>
-                    <p class="text-xs text-slate-300 leading-relaxed">Se encargan de mantener los servidores funcionando sin caídas, actualizar el código y verificar las copias de seguridad.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Mantienen servidores y código bajo <strong>segundo factor obligatorio (2FA)</strong>, clave mínima de 12 caracteres y cierre automático tras 15 minutos de inactividad, sin ver datos de tarjetas.</p>
                 </div>
             </div>
 
             <!-- Normativas Operativas Internas -->
             <div class="grid md:grid-cols-2 gap-4 items-start">
                 <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-emerald-500 rounded-xl p-4 space-y-2.5">
-                    <h3 class="text-sm font-bold text-emerald-300">Control de acceso y bajas inmediatas</h3>
+                    <h3 class="text-sm font-bold text-emerald-300">Control de acceso, sesiones y bajas inmediatas</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">
-                        Cada integrante de TecnoMarket trabaja con un usuario individual y tiene estrictamente prohibido prestarlo o anotarlo en lugares visibles.
+                        Cada integrante de TecnoMarket trabaja con un usuario individual, contraseña de al menos 12 caracteres y tiene estrictamente prohibido prestarlo o anotarlo en lugares visibles.
                     </p>
                     <div id="text-e1" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
                         <p>
-                            Si un empleado deja de formar parte de la empresa, su cuenta y todos sus permisos se bloquean en el mismo momento en que termina su relación laboral, evitando que alguien ajeno a la tienda pueda entrar al panel interno.
+                            Las sesiones internas cierran automáticamente por inactividad (15 minutos para Personal Técnico y Administradores; 30 minutos para Empleados). Si un integrante deja la empresa, su cuenta y todos sus permisos se bloquean en el mismo momento en que termina su relación laboral.
                         </p>
                         <div class="pt-2 border-t border-slate-800/80 text-slate-400">
-                            <strong class="text-slate-200">En detalle:</strong> Todo movimiento interno queda registrado con usuario y hora (trazabilidad). Al desvincularse un miembro del equipo, se revocan credenciales, tokens y accesos remotos de inmediato.
+                            <strong class="text-slate-200">En detalle:</strong> Todo movimiento interno queda registrado con usuario, rol y hora (trazabilidad). El acceso a servidores, repositorios de código y paneles críticos exige 2FA sin excepciones, y ante una baja se revocan credenciales, claves SSH/tokens y accesos remotos de inmediato.
                         </div>
                     </div>
                     <button onclick="toggleBloque('text-e1', this)" class="text-[11px] font-semibold text-emerald-400 hover:text-emerald-300 pt-1 cursor-pointer">
@@ -182,16 +185,16 @@
                 </article>
 
                 <article class="bg-slate-950/80 border border-slate-800 border-l-4 border-l-emerald-500 rounded-xl p-4 space-y-2.5">
-                    <h3 class="text-sm font-bold text-emerald-300">Prohibición de sacar información</h3>
+                    <h3 class="text-sm font-bold text-emerald-300">Prohibición de sacar información y terceros</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">
-                        Ningún empleado puede descargar bases de datos de compradores, listados de facturas ni código del sistema a dispositivos personales.
+                        Ningún empleado ni técnico puede descargar bases de datos de compradores, listados de facturas ni código del sistema a dispositivos personales.
                     </p>
                     <div id="text-e2" class="hidden space-y-2.5 text-xs text-slate-300 leading-relaxed">
                         <p>
-                            Está terminantemente prohibido copiar datos a pendrives, correos personales o teléfonos particulares. Toda consulta sobre un envío o reclamo se realiza únicamente dentro de la plataforma interna bajo control y auditoría.
+                            Está terminantemente prohibido copiar datos a pendrives, correos personales o teléfonos particulares. Cuando intervenimos empresas de logística o la pasarela de pago, solo transmitimos los datos mínimos indispensables para despachar el pedido o validar el cobro bajo acuerdo de confidencialidad.
                         </p>
                         <div class="pt-2 border-t border-slate-800/80 text-slate-400">
-                            <strong class="text-slate-200">En detalle:</strong> La información de los compradores solo se consulta dentro del entorno seguro de la empresa para gestionar envíos o garantías. Cualquier extracción no autorizada implica sanciones legales y laborales.
+                            <strong class="text-slate-200">En detalle:</strong> La información de los compradores solo se consulta dentro del entorno seguro de la empresa para gestionar envíos o garantías. Cualquier extracción no autorizada implica sanciones laborales y legales.
                         </div>
                     </div>
                     <button onclick="toggleBloque('text-e2', this)" class="text-[11px] font-semibold text-emerald-400 hover:text-emerald-300 pt-1 cursor-pointer">
